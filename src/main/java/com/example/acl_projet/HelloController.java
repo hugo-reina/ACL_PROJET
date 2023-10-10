@@ -108,7 +108,7 @@ public class HelloController{
     }
 
     public void pageScore(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/jeu/page-classement.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/acl_projet/page-classement.fxml"));
         root = fxmlLoader.load();
         stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
