@@ -52,7 +52,7 @@ public class HelloController{
     }
 
     public void ScenePseudo(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/jeu/choix-pseudo.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/acl_projet/choix-pseudo.fxml"));
         root = fxmlLoader.load();
         stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
