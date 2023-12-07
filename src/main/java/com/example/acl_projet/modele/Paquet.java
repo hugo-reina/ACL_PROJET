@@ -1,4 +1,6 @@
-package com.example.acl_projet;
+package com.example.acl_projet.modele;
+
+import com.example.acl_projet.modele.Carte;
 
 import java.util.ArrayList;
 import java.util.Random;

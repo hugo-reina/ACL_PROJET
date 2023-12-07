@@ -1,4 +1,4 @@
-package com.example.acl_projet;
+package com.example.acl_projet.modele;
 
 public class Carte {
 
