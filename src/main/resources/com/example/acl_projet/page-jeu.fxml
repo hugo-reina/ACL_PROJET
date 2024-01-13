@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.text.Font?>
-<VBox alignment="CENTER" prefHeight="256.0" prefWidth="400" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.acl_projet.vue.HelloController">
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="700" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.acl_projet.vue.pageJeu">
     <style>
         -fx-background-image: url('file:src/main/cartes/fond.jpg');
         -fx-background-size: cover;
@@ -18,6 +18,7 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+    <Label fx:id="pseudoJeu" layoutX="232.0" layoutY="95.0" prefHeight="17.0" prefWidth="135.0" text="Veuillez créer votre pseudo" textFill="WHITE" />
     <Label fx:id="parties" style="-fx-text-fill: white; -fx-font-weight: bold;" />
     <Label fx:id="Nom" />
     <HBox prefHeight="100.0" prefWidth="200.0">
@@ -44,4 +45,6 @@
             <Button fx:id="btn_suivant" mnemonicParsing="false" onAction="#pageScore" text="Suivant" visible="false" />
         </buttons>
     </ButtonBar>
+    <Button layoutX="50.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnQuitter" text="Quitter" />
+    <Button layoutX="50.0" layoutY="350.0" mnemonicParsing="false" onAction="#btnAbandonner" text="Abandonner" />
 </VBox>

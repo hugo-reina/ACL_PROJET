@@ -3,6 +3,7 @@ package com.example.acl_projet.vue;
 import com.example.acl_projet.controleur.bdd.DAO.ClassementDAO;
 import com.example.acl_projet.controleur.bdd.DAO.ClassementDAOImpl;
 import com.example.acl_projet.controleur.bdd.bdd;
+import com.example.acl_projet.controleur.modifPage;
 import com.example.acl_projet.modele.Carte;
 import com.example.acl_projet.modele.Classement;
 import com.example.acl_projet.modele.Joueur;
@@ -11,17 +12,23 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PageClassement {
+    private Joueur joueur;
 
+    public Button btnRejouer;
+    private modifPage modifPage = new modifPage();
+    private String pagePrecedente;
     ClassementDAO classementDAO;
     @FXML
     private TableView<Joueur> table;
@@ -64,4 +71,30 @@ public class PageClassement {
         pseudoColumn.setCellValueFactory(new PropertyValueFactory<>("pseudonyme"));
         scoreColumn.setCellValueFactory(new PropertyValueFactory<>("score"));
     }
+
+    public void QuitterPartie(ActionEvent actionEvent) throws IOException {
+        modifPage.movePage(actionEvent,"page-accueil.fxml");
+    }
+
+    public void setPagePrecedente(String pagePrecedente) {
+        this.pagePrecedente = pagePrecedente;
+        if(pagePrecedente.equals("pageJeu")){
+            btnRejouer.setVisible(true);
+            btnRejouer.setDisable(false);
+        }
+    }
+
+    public void Rejouer(ActionEvent actionEvent) throws IOException {
+        pageJeu p = new pageJeu();
+        modifPage.movePageJoueur(actionEvent,"page-jeu.fxml", joueur, p);
+    }
+
+    public void setJoueur(Joueur joueur) {
+        this.joueur = joueur;
+    }
 }
+
+
+/**
+ *
+ */

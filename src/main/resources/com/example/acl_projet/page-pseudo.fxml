@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.acl_projet.vue.pagePseudo">
+
+    <style>
+        -fx-background-image: url('file:src/main/cartes/fond.jpg');
+        -fx-background-size: cover;
+    </style>
+
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+        <children>
+            <TextField fx:id="pseudo" layoutX="200.0" layoutY="129.0" />
+            <Button layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnConnexion" text="Connexion" />
+            <Button layoutX="300" layoutY="200.0" mnemonicParsing="false" onAction="#btnInscription" text="Inscription" />
+            <Label layoutX="232.0" layoutY="95.0" prefHeight="17.0" prefWidth="135.0" text="Veuillez-vous connecter" textFill="WHITE" />
+            <Button layoutX="53.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnRetour" text="Retour" />
+            <Label fx:id="txtError" visible="false" layoutX="232.0" layoutY="250.0" prefHeight="17.0" prefWidth="135.0" text="Veuillez inséré un pseudo existant ou vous crée un compte" textFill="RED" />
+        </children>
+    </AnchorPane>
+
+
+</AnchorPane>

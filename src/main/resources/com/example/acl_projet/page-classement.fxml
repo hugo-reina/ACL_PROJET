@@ -7,9 +7,13 @@
 
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.acl_projet.vue.PageClassement">
+    <style>
+        -fx-background-image: url('file:src/main/cartes/fond.jpg');
+        -fx-background-size: cover;
+    </style>
     <children>
 
-        <TableView fx:id="table" prefHeight="500.0" prefWidth="700.0">
+        <TableView fx:id="table" prefHeight="450.0" prefWidth="700.0">
             <columns>
                 <!-- Colonne pour le pseudonyme -->
                 <TableColumn fx:id="pseudoColumn" text="Pseudonyme">
@@ -25,5 +29,7 @@
                 </TableColumn>
             </columns>
         </TableView>
+        <Button layoutX="53.0" layoutY="460.0" mnemonicParsing="false" onAction="#QuitterPartie" text="Quitter" />
+        <Button fx:id="btnRejouer" disable="true" visible="false" layoutX="150.0" layoutY="460.0" mnemonicParsing="false" onAction="#Rejouer" text="Rejouer" />
     </children>
 </AnchorPane>
